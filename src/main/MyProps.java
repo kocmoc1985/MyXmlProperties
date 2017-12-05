@@ -17,7 +17,7 @@ public class MyProps extends MyXMLBasic {
 
     private final String PATH;
 
-    public MyProps(String path, boolean b) {
+    public MyProps(String path) {
         //
         PATH = path;
         //
@@ -36,7 +36,9 @@ public class MyProps extends MyXMLBasic {
     }
 
     public String getProperty(String parent, String property, String defaultValue) {
+        //
         String value = getElemTextByName(parent, property);
+        //
         if (value == null || value.isEmpty()) {
             return defaultValue;
         } else {
@@ -52,15 +54,29 @@ public class MyProps extends MyXMLBasic {
             return value;
         }
     }
-
-    public String getSubProperty(String property, String subproperty, String defaultValue) {
-        String value = getAttributeValue(property, subproperty);
+    
+     public String getAttribute(String parent,String property, String attribute, String defaultValue) {
+        //
+        String value = getAttributeValue(parent,property, attribute);
+        //
         if (value == null || value.isEmpty()) {
             return defaultValue;
         } else {
             return value;
         }
     }
+
+    public String getAttribute(String property, String attribute, String defaultValue) {
+        //
+        String value = getAttributeValue(property, attribute);
+        //
+        if (value == null || value.isEmpty()) {
+            return defaultValue;
+        } else {
+            return value;
+        }
+    }
+    
 
     public boolean setProperty(String property, String value) {
         return setElemTextByName(property, value);
@@ -78,14 +94,4 @@ public class MyProps extends MyXMLBasic {
         writeXMLDocToFile(PATH, false, false);
     }
 
-//    public static void main(String[] args) {
-//        MyProps myProps = new MyProps("properties/goetfert.xml", true);
-//        String odbc = myProps.getProperty("odbc", "xxx");
-//        System.out.println("" + odbc);
-//
-//        myProps.addSubProperty("port", "info2", "???");
-//
-////        myProps.setProperty("ip", "192.168.18.220");
-//        myProps.saveProperties();
-//    }
 }

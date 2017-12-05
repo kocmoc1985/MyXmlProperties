@@ -26,7 +26,7 @@ public class MyXMLBasic {
     private SAXBuilder builder;
     private Document DOCUMENT;
     private Element ROOT;
-    private String PATH = "results/test.xml";
+    private String PATH = "xml/test.xml";
     private String NAME_OF_ROOT_ELEM;
 
     public MyXMLBasic() {
@@ -108,13 +108,19 @@ public class MyXMLBasic {
             return false;
         }
     }
-
+    
     public String getAttributeValue(Element elem, String attributeName) {
         return elem.getAttributeValue(attributeName);
     }
 
     public String getAttributeValue(String elem, String attributeName) {
         return ROOT.getChild(elem).getAttributeValue(attributeName);
+    }
+    
+    public String getAttributeValue(String parent,String elem, String attributeName) {
+        Element par_elem = ROOT.getChild(parent);
+        Element elem_ = par_elem.getChild(elem);
+        return elem_.getAttributeValue(attributeName);
     }
 
     public boolean setAttributeValue(String elem, String attributeName, String value) {
@@ -257,11 +263,7 @@ public class MyXMLBasic {
     }
 
     public static void main(String[] args) {
-        MyXMLBasic basics = new MyXMLBasic("TEST");
-        basics.example1();
-//        basics.example1();
-        basics.testWrite();
-        System.out.println("Iam working");
+        
     }
 
     public class Attribute {
