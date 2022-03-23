@@ -24,10 +24,16 @@ public class Run {
         //
         MyProps props = new MyProps("xml/test.xml");
         //
+        String str_0 = props.getProperty("sql_host");
+        //
+        String str_0_1 = props.getAttribute("sql_host", "localhost", "null");
+        //
         String str_1 = props.getAttribute("PARENT", "children", "null");
         //
         String str_2 = props.getAttribute("PARENT","child1", "chldAttr1", "null");
         //
+        System.out.println("" + str_0);
+        System.out.println("" + str_0_1);
         System.out.println("" + str_1);
         System.out.println("" + str_2);
     }

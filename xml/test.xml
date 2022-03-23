@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEST>
+<sql_host localhost="yes">10.87.0.2</sql_host>
 <PARENT parent="yes" children="2">
 <child1 chldAttr1="attr1" chldAttr2="attr2">text child1</child1>
 <child2 chldAttr1="attr1" chldAttr2="attr2">text child2</child2>

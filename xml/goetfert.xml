@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Properties>
+	
+	<ip info="if missing binds to all available ip's"></ip>
+	<port info="server port">9999</port>
+	<httpLoggingEnabled>false</httpLoggingEnabled>
+	<odbc info="deprecated"></odbc> <!--Goetfert-->
+	<mdb></mdb><!-- c:/Goettfert/Goetfert.mdb -->
+	<jtds>true</jtds>
+	<mysql></mysql>
+	<mssql></mssql>
+	
+	<sql_host>10.87.0.2</sql_host>
+	<sql_port>1433</sql_port>
+	<db_name info="for tds and mysql">MCLAB_COMPOUND</db_name>
+	<user>sa</user>
+	<pass></pass>
+	
+    <locale>de_DE</locale>
+    <company>compounds</company>
+	
+	<tempTolerance>0.5</tempTolerance>
+	
+	<moduls>
+	<xMLWriterResults>true</xMLWriterResults>
+	<xMLWriterParameters>true</xMLWriterParameters>
+	<writeToTxtFile>true</writeToTxtFile>
+	</moduls>
+	
+	<proto>
+		<readyToStart sentBy="S">MF!</readyToStart>
+		<oneSecResultSuffix sentBy="C">MD:</oneSecResultSuffix>
+		<testProcedureOk sentBy="C">PQ:OK</testProcedureOk>
+		<testStarted sentBy="C">SM!</testStarted>
+		<testEnded sentBy="C">EM!</testEnded>
+		<testAborted sentBy="C">EvC!</testAborted>
+		<paramMissing sentBy="C">PQ:F</paramMissing>
+	</proto>
+		
+</Properties>
