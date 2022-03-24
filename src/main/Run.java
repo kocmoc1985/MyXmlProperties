@@ -21,6 +21,7 @@ public class Run {
         //
         // EXAMPLES OF READING
         //
+//        System.out.println(getRecipeName_kobe());
         //
         MyProps props = new MyProps("xml/test.xml");
         //
@@ -36,5 +37,21 @@ public class Run {
         System.out.println("" + str_0_1);
         System.out.println("" + str_1);
         System.out.println("" + str_2);
+    }
+    
+    public static final String XML_KOBE_MP_CONTROLLER = "xml/test.xml";
+    public static final String XML_PROPERTY__RECIPE_NAME = "sql_host";
+    public static final String XML_PROPERTY__AMMOUNT_OF_STEPS = "";
+    
+    public static String getRecipeName_kobe(){
+        MyProps props = new MyProps(XML_KOBE_MP_CONTROLLER);
+        String recipeName = props.getProperty(XML_PROPERTY__RECIPE_NAME);
+        return recipeName;
+    }
+    
+     public static String getAmmountOfSteps_kobe(){
+        MyProps props = new MyProps(XML_KOBE_MP_CONTROLLER);
+        String steps = props.getProperty(XML_PROPERTY__AMMOUNT_OF_STEPS);
+        return steps;
     }
 }
