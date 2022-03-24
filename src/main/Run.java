@@ -70,7 +70,7 @@ public class Run {
     
     public static int kobe_get_ammount_of_steps() {
         //
-        MyProps props = new MyProps("xml/kobe.xml");
+        MyProps props = new MyProps(XML_KOBE_MP_CONTROLLER);
         //
         List<Element> list = props.ROOT.getChildren();
         //
@@ -94,7 +94,7 @@ public class Run {
     }
 
     public static void kobe_test_a() {
-        MyProps props = new MyProps("xml/kobe.xml");
+        MyProps props = new MyProps(XML_KOBE_MP_CONTROLLER);
         //
         List<Element> list = props.ROOT.getChildren();
         //
