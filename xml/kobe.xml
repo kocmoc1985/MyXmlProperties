@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MpFileComp xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CompData>
+<isNew>false</isNew>
+<CompoundName>TEST01</CompoundName>
+<CompoundId>18</CompoundId>
+<StepList>
+<MpRecipeStep>
+<StepNo>1</StepNo>
+</MpRecipeStep>
+<MpRecipeStep>
+<StepNo>2</StepNo>
+</MpRecipeStep>
+</StepList>
+</CompData>
+</MpFileComp>

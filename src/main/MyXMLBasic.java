@@ -25,7 +25,7 @@ public class MyXMLBasic {
 
     private SAXBuilder builder;
     private Document DOCUMENT;
-    private Element ROOT;
+    public Element ROOT;
     private String PATH = "xml/test.xml";
     private String NAME_OF_ROOT_ELEM;
 
